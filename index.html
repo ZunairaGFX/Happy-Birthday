@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>A Little Birthday Secret 💗</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+
+<!-- ================= LOCK ================= -->
+
+<section id="lock">
+
+    <div class="card reveal">
+
+        <div class="small-title">
+            A LITTLE BIRTHDAY SECRET 💗
+        </div>
+
+
+        <h1>
+            Heyyy! 💗
+        </h1>
+
+
+        <p>
+            I made something for you...<br>
+            But first, unlock it. 🔐
+        </p>
+
+
+        <p class="code-label">
+            Enter The Secret Code:
+        </p>
+
+
+        <div class="code-dots" id="dots"></div>
+
+
+        <div class="keypad">
+
+            <button class="key"
+                    onclick="press(1)">
+                1
+            </button>
+
+            <button class="key"
+                    onclick="press(2)">
+                2
+            </button>
+
+            <button class="key"
+                    onclick="press(3)">
+                3
+            </button>
+
+
+            <button class="key"
+                    onclick="press(4)">
+                4
+            </button>
+
+            <button class="key"
+                    onclick="press(5)">
+                5
+            </button>
+
+            <button class="key"
+                    onclick="press(6)">
+                6
+            </button>
+
+
+            <button class="key"
+                    onclick="press(7)">
+                7
+            </button>
+
+            <button class="key"
+                    onclick="press(8)">
+                8
+            </button>
+
+            <button class="key"
+                    onclick="press(9)">
+                9
+            </button>
+
+
+            <button class="key"
+                    onclick="clearCode()">
+                ⌫
+            </button>
+
+            <button class="key"
+                    onclick="press(0)">
+                0
+            </button>
+
+            <button class="key"
+                    onclick="checkCode()">
+                ✔
+            </button>
+
+        </div>
+
+
+        <div class="message"
+             id="code-msg">
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= QUESTION ================= -->
+
+<section id="question"
+         class="hidden">
+
+    <div class="card reveal">
+
+        <div class="small-title">
+            A LITTLE SURPRISE
+        </div>
+
+
+        <h2>
+            Okay... 🎀
+        </h2>
+
+
+        <p>
+            I made something for you.<br>
+            Do you want to see it?
+        </p>
+
+
+        <div class="choice-area">
+
+            <button class="btn"
+                    id="yesBtn"
+                    onclick="showSection('cake')">
+
+                Yeah 💗
+
+            </button>
+
+
+            <button class="btn secondary"
+                    id="noBtn"
+                    onclick="moveNo()">
+
+                No 🙄
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CAKE ================= -->
+
+<section id="cake"
+         class="hidden">
+
+    <div class="card reveal">
+
+        <div class="small-title">
+            A WISH FIRST
+        </div>
+
+
+        <h2>
+            Make a Wish ✨
+        </h2>
+
+
+        <p>
+            Tap each candle to blow it out.
+        </p>
+
+
+        <div class="cake-wrap">
+
+            <div class="candle-row">
+
+                <div class="candle"
+                     onclick="blow(this)">
+
+                    <span class="flame"></span>
+                    <span class="smoke">~</span>
+
+                </div>
+
+
+                <div class="candle"
+                     onclick="blow(this)">
+
+                    <span class="flame"></span>
+                    <span class="smoke">~</span>
+
+                </div>
+
+
+                <div class="candle"
+                     onclick="blow(this)">
+
+                    <span class="flame"></span>
+                    <span class="smoke">~</span>
+
+                </div>
+
+
+                <div class="candle"
+                     onclick="blow(this)">
+
+                    <span class="flame"></span>
+                    <span class="smoke">~</span>
+
+                </div>
+
+
+                <div class="candle"
+                     onclick="blow(this)">
+
+                    <span class="flame"></span>
+                    <span class="smoke">~</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="cake">
+
+                <div class="layer top"></div>
+
+                <div class="layer mid"></div>
+
+                <div class="layer bottom"></div>
+
+                <div class="plate"></div>
+
+            </div>
+
+        </div>
+
+
+        <p id="candleMsg"
+           class="status">
+
+            5 candles glowing ✨
+
+        </p>
+
+
+        <div class="cake-date">
+            21 • 10 • 2026
+        </div>
+
+
+        <p class="cake-tagline">
+            A little wish, a little magic,
+            and a whole lot of happiness for you. 💗
+        </p>
+
+
+        <button class="scroll-btn"
+                onclick="goTo('balloons')">
+
+            KEEP GOING ✨
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= BALLOONS ================= -->
+
+<section id="balloons"
+         class="hidden">
+
+    <div class="card reveal">
+
+        <div class="small-title">
+            A LITTLE FUN
+        </div>
+
+
+        <h2>
+            Pop Them All! 🎈
+        </h2>
+
+
+        <p>
+            Go on, pop every balloon. 🎈
+        </p>
+
+
+        <p id="balloonCount"
+           class="status">
+
+            7 balloons left
+
+        </p>
+
+
+        <div class="balloon-area">
+
+            <div class="balloon b1"
+                 onclick="popBalloon(this)">
+                <span class="shine"></span>
+            </div>
+
+
+            <div class="balloon b2"
+                 onclick="popBalloon(this)">
+                <span class="shine"></span>
+            </div>
+
+
+            <div class="balloon b3"
+                 onclick="popBalloon(this)">
+                <span class="shine"></span>
+            </div>
+
+
+            <div class="balloon b4"
+                 onclick="popBalloon(this)">
+                <span class="shine"></span>
+            </div>
+
+
+            <div class="balloon b5"
+                 onclick="popBalloon(this)">
+                <span class="shine"></span>
+            </div>
+
+
+            <div class="balloon b6"
+                 onclick="popBalloon(this)">
+                <span class="shine"></span>
+            </div>
+
+
+            <div class="balloon b7"
+                 onclick="popBalloon(this)">
+                <span class="shine"></span>
+            </div>
+
+        </div>
+
+
+        <button class="scroll-btn"
+                onclick="goTo('letter')">
+
+            KEEP GOING 💌
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= LETTER ================= -->
+
+<section id="letter"
+         class="hidden">
+
+    <div class="card reveal">
+
+        <div class="small-title">
+            A BIRTHDAY NOTE
+        </div>
+
+
+        <h2>
+            Just a little something... 💗
+        </h2>
+
+
+        <div class="birthday-wish">
+
+            <h3>
+                Happy Birthdayyy! 🍰💗
+            </h3>
+
+
+            <img src="bears.png"
+                 alt="Cute birthday bears"
+                 class="bears-img">
+
+
+            <p>
+                May Allah bless you with happiness,
+                peace, success and countless beautiful
+                moments. ❤️
+            </p>
+
+        </div>
+
+
+
+        <!-- ================= ENVELOPE ================= -->
+
+        <div class="envelope"
+             onclick="openLetter(this)">
+
+            <div class="env-back"></div>
+
+
+            <div class="letter-paper">
+
+                <div class="letter-text">
+
+                    <strong>
+                        Happyyy Birthdayyy 💗
+                    </strong>
+
+
+                    <br><br>
+
+
+                    Please take care of yourself, okay? There are things I never said, and maybe one day you’ll understand why I chose to step away. There’s a reason behind it, but I’m not ready to tell you.
+
+And no, it’s not because I found new people, made new friends, and became happy enough to forget you. It doesn’t work like that. People can come into your life, you can smile with them, and still carry the memories of someone who once meant a lot to you.
+
+Some goodbyes don’t happen because people stop caring. Sometimes things simply change in ways we can’t explain. I genuinely hope you stay happy, take care of yourself, and maybe someday, you’ll understand the reason behind all of this.
+
+
+                    <br><br>
+
+
+                    <strong>
+                        Happyyy Birthdayyy! 🎂💗
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="flap"></div>
+
+            <div class="env-front"></div>
+
+            <div class="env-heart">
+                💗
+            </div>
+
+        </div>
+
+
+        <p id="letterHint"
+           class="letter-hint">
+
+            Tap the envelope to open it! 💌
+
+        </p>
+
+
+        <button class="scroll-btn"
+                onclick="goTo('gift')">
+
+            ONE LAST SURPRISE 🎁
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= GIFT ================= -->
+
+<section id="gift"
+         class="hidden">
+
+    <div class="card reveal">
+
+        <div class="small-title">
+            ONE LAST THING
+        </div>
+
+
+        <h2>
+            Your Little Gift 🎁
+        </h2>
+
+
+        <p>
+            You actually made it all the way here. 🙄💗
+        </p>
+
+
+        <div class="gift"
+             id="giftBox"
+             onclick="openGift()">
+
+            <div class="box"></div>
+
+            <div class="lid"></div>
+
+            <div class="ribbon-v"></div>
+
+            <div class="ribbon-h"></div>
+
+        </div>
+
+
+        <p class="gift-note">
+            Tap the gift 🎁
+        </p>
+
+
+        <div id="giftMessage"
+             class="gift-message hidden">
+
+            <h3>
+                Happyyy Birthdayyy! 🎂💗
+            </h3>
+
+
+            <p>
+                May all your good wishes come true,
+                and may Allah fill your life with
+                happiness, peace and success. ✨
+            </p>
+
+
+            <p>
+                Stay happyy 💗
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
